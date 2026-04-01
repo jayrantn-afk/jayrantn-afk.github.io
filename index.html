@@ -22,7 +22,7 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: "PingFang TC", "Microsoft JhengHei", sans-serif; background-color: var(--bg-pale-blue); color: var(--text-dark); line-height: 1.7; }
-        a { text-decoration: none; transition: 0.3s; }
+        a { text-decoration: none; transition: 0.3s; color: inherit; }
         ul { list-style: none; }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
@@ -111,7 +111,7 @@
         .card-body { padding: 25px; }
         
         .tag { background: #e6f3f9; color: var(--primary-text-blue); padding: 4px 12px; border-radius: 50px; font-size: 11px; font-weight: bold; }
-        .card-title { font-size: 22px; margin: 12px 0; line-height: 1.4; color: var(--text-dark); cursor: pointer; font-weight: 700; }
+        .card-title { font-size: 22px; margin: 12px 0; line-height: 1.4; color: var(--text-dark); cursor: pointer; font-weight: 700; transition: 0.2s; }
         .card-title:hover { color: var(--primary-text-blue); }
         .card-meta { font-size: 12px; color: #999; margin-bottom: 12px; display: flex; align-items: center; }
         .card-excerpt { color: var(--text-gray); font-size: 15px; }
@@ -186,10 +186,14 @@
             </div>
 
             <article class="card fade-in-up">
-                <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1200&q=80" alt="狗狗知識" class="card-img">
+                <a href="article-1.html">
+                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1200&q=80" alt="狗狗知識" class="card-img">
+                </a>
                 <div class="card-body">
                     <span class="tag">調養專欄</span>
-                    <h2 class="card-title">換季過敏怎麼辦？專業醫師教你從飲食改善毛孩體質</h2>
+                    <a href="article-1.html">
+                        <h2 class="card-title">換季過敏怎麼辦？專業醫師教你從飲食改善毛孩體質</h2>
+                    </a>
                     <div class="card-meta">📅 2026年4月1日 | 👤 寵編小藍</div>
                     <p class="card-excerpt">換季時期毛孩總是抓個不停？針對皮肤敏感的毛孩，本文由專業寵物營養師協助審稿，為你解析飲食調整技巧...</p>
                 </div>
