@@ -6,7 +6,7 @@ date: "2026年3月20日"
 author: "寵編小藍"
 read_time: "4分鐘"
 views: "6,177"
-image: "https://images.unsplash.com/photo-1591769225440-811ad7d6eca3?auto=format&fit=crop&w=1200&q=80"
+image: "https://images.unsplash.com/photo-1513245543132-31f507417b26?auto=format&fit=crop&w=1200&q=80"
 ---
 
 貓咪的牙周病盛行率極高。許多主人反應「一拿牙刷就被咬」，其實是因為跳過了最重要的「減敏訓練」。
