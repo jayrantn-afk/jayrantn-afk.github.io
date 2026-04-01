@@ -17,7 +17,6 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5930015497473852" crossorigin="anonymous"></script>
 
     <style>
-        /* ================= 基礎設定 ================= */
         :root { 
             --primary-hero-blue: #D0EFFF; 
             --primary-text-blue: #4A90E2; 
@@ -35,11 +34,9 @@
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* ================= 頂部閱讀進度條 ================= */
         .progress-container { width: 100%; height: 3px; background: transparent; position: fixed; top: 0; z-index: 1002; }
         .progress-bar { height: 3px; background: var(--accent-gold); width: 0%; transition: width 0.1s ease-out; }
 
-        /* ================= 導覽列 ================= */
         header { background: var(--white); padding: 10px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
         .nav-flex { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 24px; font-weight: 900; color: var(--primary-text-blue); display: flex; align-items: center; white-space: nowrap; }
@@ -49,7 +46,6 @@
         .nav-links a:hover { color: var(--primary-text-blue); }
         .btn-cta { background: var(--primary-hero-blue); color: white !important; padding: 8px 18px; border-radius: 50px; font-size: 14px; }
 
-        /* ================= 首頁大圖 (Hero) ================= */
         .hero { 
             position: relative; width: 100%; height: 280px; background-color: var(--primary-hero-blue); 
             background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" opacity="0.1"><path d="M12.5 15C10.6 15 9.1 16.5 9.1 18.4s1.5 3.4 3.4 3.4s3.4-1.5 3.4-3.4s-1.5-3.4-3.4-3.4zM22.5 15C20.6 15 19.1 16.5 19.1 18.4s1.5 3.4 3.4 3.4s3.4-1.5 3.4-3.4s-1.5-3.4-3.4-3.4zM17.5 25C15 25 12.9 27.1 12.9 29.6c0 1.9 1.1 3.5 2.8 4.3c-.6 1.4-.9 2.9-.9 4.4c0 3 2.1 5.5 4.7 6.3c2.6-.8 4.7-3.3 4.7-6.3c0-1.5-.3-3-.9-4.4c1.7-.8 2.8-2.4 2.8-4.3c0-2.5-2.1-4.6-4.6-4.6zm5 10C21.1 35 19.6 36.5 19.6 38.4s1.5 3.4 3.4 3.4s3.4-1.5 3.4-3.4s-1.5-3.4-3.4-3.4zM12.5 35C10.6 35 9.1 36.5 9.1 38.4s1.5 3.4 3.4 3.4s3.4-1.5 3.4-3.4s-1.5-3.4-3.4-3.4z" fill="%234A90E2"/></svg>'); 
@@ -64,34 +60,23 @@
         .hero-content h1 { font-size: 28px; font-weight: 900; color: var(--text-dark); margin-bottom: 5px;}
         .hero-content p { font-size: 16px; color: var(--primary-text-blue); font-weight: bold; }
 
-        /* ================= 主內容網格 ================= */
         .content-grid { display: grid; grid-template-columns: 1fr 320px; gap: 40px; margin: 30px 0 60px 0; }
 
-        /* ================= 大圖輪播 (Carousel) ================= */
         .carousel { position: relative; width: 100%; height: 450px; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); margin-bottom: 40px; background: #000; }
         .carousel-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.8s; z-index: 1; }
         .carousel-slide.active { opacity: 1; z-index: 2; }
-        
-        /* 💡 整張圖片變成可點擊的連結 */
         .slide-link { display: block; width: 100%; height: 100%; text-decoration: none; color: white; }
         .slide-link:hover .carousel-title { color: var(--primary-hero-blue); }
-        
         .carousel-slide img { width: 100%; height: 100%; object-fit: cover; opacity: 0.8; transition: 0.5s; }
-        .slide-link:hover img { opacity: 0.9; transform: scale(1.02); } /* 滑鼠移過去圖片會微放大 */
-
+        .slide-link:hover img { opacity: 0.9; transform: scale(1.02); } 
         .carousel-caption { position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0)); padding: 60px 40px 30px; }
-        
-        /* 💡 圖片上的彩色小標籤 */
         .carousel-tag { background: var(--primary-text-blue); color: white; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-bottom: 12px; display: inline-block; }
         .carousel-title { font-size: 28px; font-weight: 800; margin: 0; line-height: 1.3; text-shadow: 0 2px 4px rgba(0,0,0,0.5); transition: 0.3s;}
-        
-        /* 輪播切換按鈕 */
         .carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.2); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; font-size: 20px; cursor: pointer; z-index: 10; transition: 0.3s; }
         .carousel-btn:hover { background: rgba(255,255,255,0.6); color: #000; }
         .prev-btn { left: 20px; }
         .next-btn { right: 20px; }
 
-        /* ================= 文章小卡片網格 ================= */
         .section-title { font-size: 20px; font-weight: 800; margin-bottom: 20px; border-left: 5px solid var(--primary-text-blue); padding-left: 10px; color: var(--text-dark); }
         .article-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px; margin-bottom: 40px;}
         .mini-card { background: var(--white); border-radius: 15px; overflow: hidden; border: 1px solid #f0f0f0; transition: 0.3s; }
@@ -103,20 +88,21 @@
         .mini-title:hover { color: var(--primary-text-blue); }
         .mini-meta { font-size: 11px; color: #999; display: flex; justify-content: space-between; }
 
-        /* ================= 廣告位 ================= */
         .ad-slot { background: #e6f3f9; border: 2px dashed var(--primary-hero-blue); border-radius: 15px; padding: 25px; text-align: center; margin-bottom: 40px; color: var(--primary-text-blue); font-size: 14px; font-weight: bold; }
 
-        /* ================= 側邊欄 (Sidebar) ================= */
         aside { position: sticky; top: 80px; height: fit-content; }
         .widget { background: var(--white); padding: 20px; border-radius: 20px; margin-bottom: 20px; border: 1px solid #f9f9f9; box-shadow: 0 2px 10px rgba(0,0,0,0.02);}
         .widget-title { margin-bottom: 15px; font-size: 16px; font-weight: bold; border-left: 4px solid var(--primary-hero-blue); padding-left: 8px; color: var(--text-dark);}
 
-        /* ================= 動畫與頁腳 ================= */
+        /* 💡 低調版足跡數據樣式 */
+        .lowkey-stats { font-size: 13px; color: #999; padding: 10px 15px; }
+        .lowkey-stats div { display: flex; justify-content: space-between; margin-bottom: 6px; }
+        .lowkey-stats span:last-child { font-weight: bold; color: #666; }
+
         .fade-in-up { opacity: 0; transform: translateY(30px); transition: 0.6s ease-out; }
         .fade-in-up.is-visible { opacity: 1; transform: translateY(0); }
         footer { background: #2D3436; color: #f5f5f5; padding: 60px 0 30px 0; margin-top: 40px; text-align: center;}
         
-        /* ================= 手機版優化 ================= */
         @media (max-width: 768px) { 
             .logo { font-size: 18px; } 
             .nav-links a:not(.btn-cta) { display: none; } 
@@ -168,7 +154,6 @@
             </div>
 
             <div class="carousel fade-in-up">
-                
                 <div class="carousel-slide active">
                     <a href="article-1.html" class="slide-link">
                         <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=1200&q=80" alt="狗狗">
@@ -178,7 +163,6 @@
                         </div>
                     </a>
                 </div>
-                
                 <div class="carousel-slide">
                     <a href="article-2.html" class="slide-link">
                         <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=1200&q=80" alt="貓咪">
@@ -188,7 +172,6 @@
                         </div>
                     </a>
                 </div>
-
                 <div class="carousel-slide">
                     <a href="article-5.html" class="slide-link">
                         <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1200&q=80" alt="幼犬">
@@ -198,7 +181,6 @@
                         </div>
                     </a>
                 </div>
-
                 <div class="carousel-slide">
                     <a href="article-3.html" class="slide-link">
                         <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=1200&q=80" alt="貓咪吃水果">
@@ -208,7 +190,6 @@
                         </div>
                     </a>
                 </div>
-
                 <div class="carousel-slide">
                     <a href="article-4.html" class="slide-link">
                         <img src="https://images.unsplash.com/photo-1591769225440-811ad7d6eca3?auto=format&fit=crop&w=1200&q=80" alt="貓刷牙">
@@ -218,7 +199,6 @@
                         </div>
                     </a>
                 </div>
-
                 <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">&#10094;</button>
                 <button class="carousel-btn next-btn" onclick="changeSlide(1)">&#10095;</button>
             </div>
@@ -246,7 +226,7 @@
                     <a href="article-5.html"><img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=600&q=80"></a>
                     <div class="mini-card-body">
                         <a href="article-5.html"><h3 class="mini-title">幼犬入宅第一週，這三件事不能做！</h3></a>
-                        <div class="mini-meta"><span>📅 2026/03/15</span> <span style="color:var(--primary-text-blue)">👁️ 9,842</span></div>
+                        <div class="mini-meta"><span>📅 2026/03/15</span> <span style="color:var(--primary-text-blue)">👁️ 100,875</span></div>
                     </div>
                 </article>
 
@@ -254,7 +234,15 @@
                     <a href="article-3.html"><img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=600&q=80"></a>
                     <div class="mini-card-body">
                         <a href="article-3.html"><h3 class="mini-title">注意！貓咪不能碰的五種日常水果</h3></a>
-                        <div class="mini-meta"><span>📅 2026/03/25</span> <span style="color:var(--primary-text-blue)">👁️ 18,531</span></div>
+                        <div class="mini-meta"><span>📅 2026/03/25</span> <span style="color:var(--primary-text-blue)">👁️ 1,845</span></div>
+                    </div>
+                </article>
+
+                <article class="mini-card">
+                    <a href="article-4.html"><img src="https://images.unsplash.com/photo-1591769225440-811ad7d6eca3?auto=format&fit=crop&w=600&q=80"></a>
+                    <div class="mini-card-body">
+                        <a href="article-4.html"><h3 class="mini-title">如何幫主子刷牙不被咬？掌握三階段</h3></a>
+                        <div class="mini-meta"><span>📅 2026/03/20</span> <span style="color:var(--primary-text-blue)">👁️ 6,177</span></div>
                     </div>
                 </article>
 
@@ -277,23 +265,19 @@
                 </ul>
             </div>
 
-            <div class="widget fade-in-up" style="background: linear-gradient(135deg, #f0f8ff, #fff); border: 1px solid var(--primary-hero-blue);">
-                <h3 class="widget-title" style="border-left-color: var(--accent-gold);">網站活躍數據</h3>
-                <div style="font-size:14px; line-height:2.2; color: #666;">
-                    <div style="display:flex; justify-content:space-between;">
-                        <span>📈 全站累積瀏覽</span>
-                        <span style="color:var(--primary-text-blue); font-weight:bold;">582,910+</span>
-                    </div>
-                    <div style="display:flex; justify-content:space-between;">
-                        <span>🔥 今日在線人數</span>
-                        <span style="color:#2ecc71; font-weight:bold;">124 人</span>
-                    </div>
-                    <div style="display:flex; justify-content:space-between;">
-                        <span>🐾 毛孩足跡</span>
-                        <span style="color:var(--primary-text-blue); font-weight:bold;">3,218 訪客</span>
-                    </div>
+            <div class="fade-in-up lowkey-stats">
+                <div>
+                    <span>🐾 今日足跡</span>
+                    <span>378 人</span>
+                </div>
+                <div>
+                    <span>🏠 累積足跡</span>
+                    <span>107,842 人</span>
                 </div>
             </div>
+
+            <div class="ad-slot fade-in-up" style="height: 300px; display: flex; align-items: center; justify-content: center; margin-top: 20px;">🏥 廣告位 (Sidebar)</div>
+            
         </aside>
     </div>
 </div>
@@ -305,14 +289,12 @@
 </footer>
 
 <script>
-    // 閱讀進度條
     window.onscroll = function() { 
         var winScroll = document.body.scrollTop || document.documentElement.scrollTop; 
         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight; 
         document.getElementById("myBar").style.width = ((winScroll / height) * 100) + "%"; 
     };
 
-    // 捲動淡入動畫
     document.addEventListener("DOMContentLoaded", function() { 
         var observer = new IntersectionObserver(function(entries) { 
             entries.forEach(function(entry) { 
@@ -325,7 +307,6 @@
         document.querySelectorAll('.fade-in-up').forEach(function(el) { observer.observe(el); }); 
     });
 
-    // 輪播圖邏輯 (5篇文章)
     let slideIndex = 0; 
     const slides = document.querySelectorAll('.carousel-slide'); 
     let timer;
@@ -344,7 +325,6 @@
         timer = setInterval(() => { slideIndex++; showSlide(slideIndex); }, 3000); 
     }
     
-    // 每 3 秒自動切換
     timer = setInterval(() => { slideIndex++; showSlide(slideIndex); }, 3000);
 </script>
 
