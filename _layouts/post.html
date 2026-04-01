@@ -23,7 +23,6 @@
         
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-        /* 導覽列 */
         header { background: var(--white); padding: 10px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
         .nav-flex { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 24px; font-weight: 900; color: var(--primary-text-blue); display: flex; align-items: center; white-space: nowrap; flex-shrink: 0; }
@@ -32,12 +31,10 @@
         .nav-links a { margin-left: 20px; color: var(--text-dark); font-weight: bold; font-size: 15px; }
         .btn-cta { background: var(--primary-hero-blue); color: white !important; padding: 8px 18px; border-radius: 50px; font-size: 14px; margin-left: 20px; }
 
-        /* 文章區塊 */
         .article-container { max-width: 1000px; margin: 40px auto 0 auto; background: var(--white); border-radius: 20px; padding: 50px; box-shadow: 0 5px 20px rgba(0,0,0,0.03); }
         .breadcrumb { font-size: 14px; color: #888; margin-bottom: 20px; }
         .breadcrumb a { color: var(--primary-text-blue); }
         
-        /* 💡 標題修正：允許自然斷行 */
         .article-title { font-size: 36px; font-weight: 800; margin-bottom: 20px; line-height: 1.4; word-break: normal; overflow-wrap: break-word; }
         
         .article-meta { display: flex; align-items: center; font-size: 14px; color: #888; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; flex-wrap: wrap; gap: 12px; }
@@ -48,11 +45,9 @@
         .article-content h3 { font-size: 24px; color: var(--primary-text-blue); margin: 40px 0 15px 0; border-left: 4px solid var(--primary-hero-blue); padding-left: 10px; }
         .ad-slot-inline { background: #e6f3f9; border: 2px dashed var(--primary-hero-blue); border-radius: 10px; padding: 20px; text-align: center; margin: 30px 0; color: var(--primary-text-blue); font-weight: bold; }
 
-        /* 💡 新增：回首頁按鈕 */
         .btn-back-home { display: inline-block; background-color: var(--primary-hero-blue); color: var(--primary-text-blue); font-weight: bold; padding: 12px 30px; border-radius: 50px; transition: 0.3s; margin-top: 20px; }
         .btn-back-home:hover { background-color: var(--primary-text-blue); color: white; }
 
-        /* 💡 新增：下方推薦閱讀網格 */
         .more-articles-section { margin-top: 50px; padding-top: 30px; border-top: 2px dashed #f0f0f0; }
         .more-articles-title { font-size: 20px; font-weight: 800; margin-bottom: 20px; border-left: 4px solid var(--primary-text-blue); padding-left: 10px; color: var(--text-dark); }
         .more-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
@@ -64,20 +59,15 @@
 
         footer { background: #2D3436; color: #f5f5f5; padding: 60px 0 30px 0; margin-top: 60px; text-align: center; }
 
-        /* 📱 手機版終極優化 */
         @media (max-width: 768px) { 
             .logo { font-size: 18px; } 
             .nav-links a:not(.btn-cta) { display: none; } 
             .btn-cta { padding: 6px 12px; font-size: 12px; margin-left: 10px; }
             .article-container { padding: 20px; margin-top: 20px;} 
-            
-            /* 解決標題跑版問題 */
             .article-title { font-size: 24px; line-height: 1.4; } 
-            /* 讓日期作者在手機上整齊排列 */
             .article-meta { flex-direction: column; align-items: flex-start; gap: 8px; }
-            
             .article-hero-img { height: 200px; } 
-            .more-grid { grid-template-columns: 1fr 1fr; gap: 15px; } /* 手機版並排顯示兩張小圖 */
+            .more-grid { grid-template-columns: 1fr 1fr; gap: 15px; } 
             .mini-card img { height: 100px; }
             .mini-title { font-size: 14px; }
         }
@@ -90,8 +80,7 @@
         <a href="index.html" class="logo"><span>寵</span> 寵個毛線</a>
         <nav class="nav-links">
             <a href="index.html">回首頁</a>
-            <a href="#">搞笑影片</a>
-            <a href="https://forms.gle/qDpQc63ZqVpJCmFr5" class="btn-cta">我要投稿 📥</a>
+            <a href="https://forms.gle/ptXvTRfRgJEVyzHM6" target="_blank" class="btn-cta">我要投稿 📥</a>
         </nav>
     </div>
 </header>
@@ -130,11 +119,11 @@
                 </article>
                 <article class="mini-card">
                     <a href="article-4.html">
-                        <img src="https://images.unsplash.com/photo-1591769225440-811ad7d6eca3?auto=format&fit=crop&w=600&q=80" alt="刷牙">
+                        <img src="https://images.unsplash.com/photo-1513245543132-31f507417b26?auto=format&fit=crop&w=600&q=80" alt="刷牙">
                         <div class="mini-card-body"><h4 class="mini-title">如何幫主子刷牙不被咬？掌握三階段</h4></div>
                     </a>
                 </article>
-                <article class="mini-card" style="display: none;"> </article>
+                <article class="mini-card" style="display: none;"></article>
             </div>
         </div>
 
